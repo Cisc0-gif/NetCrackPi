@@ -7,6 +7,8 @@ interface = input(Fore.CYAN + '[*]Enter interface to use: ' + Style.RESET_ALL)
 def wait():
   wait = input('PRESS ENTER TO CONTINUE')
 
+os.chdir('/opt/NetCrackPi')
+
 def main():
   print(Fore.GREEN + Style.BRIGHT + '       _   __     __      ______     ______       __')
   print('      / | / /__  / /_    / ____/____/ ____ \_____/ /__')
@@ -101,6 +103,7 @@ def main():
     except:
       print(Fore.RED + '[*]Error running airgeddon.sh' + Style.RESET_ALL)
     os.chdir('..')
+    wait()
   if in_put == '9':
     print(Fore.CYAN + '[*]Starting WiFi-Pumpkin...' + Style.RESET_ALL)
     try:
@@ -135,6 +138,7 @@ def main():
       print(Fore.GREEN + '[+]Successfully ran pentbox1.8!' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running pentbox1.8' + Style.RESET_ALL)
+    os.chdir('..')
     wait()
   if in_put == '12':
     print(Fore.CYAN + '[*]Shutting down ' + interface + 'mon...' + Style.RESET_ALL)
