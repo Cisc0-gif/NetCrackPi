@@ -25,10 +25,11 @@ def main():
   print('*[6] Ettercap (MiTM Attack)                              *')
   print('*[7] Fluxion (MiTM/Router Spoof Attack)                  *')
   print('*[8] Airgeddon (Attack Framework - Graphical)            *')
-  print('*[9] WiFi-Pumpkin (Rogue AP - Graphical)                *')
+  print('*[9] WiFi-Pumpkin (Rogue AP - Graphical)                 *')
   print('*[10] WifiJammer (Use for RPi or w/ multiple adapters)   *')
   print('*[11] Pentbox1.8 (HoneyPot Setup)                        *')
-  print('*[12] Exit                                               *' + Style.RESET_ALL)
+  print('*[12] PwnSTAR (Fake AP Tool Framework)                   *')
+  print('*[13] Exit                                               *' + Style.RESET_ALL)
   print('==========================================================')
   in_put = input(': ')
   if in_put == '1':
@@ -141,6 +142,16 @@ def main():
     os.chdir('..')
     wait()
   if in_put == '12':
+    print(Fore.CYAN + '[*]Starting PwnSTAR...' + Style.RESET_ALL)
+    try:
+      os.chdir('PwnSTAR')
+      os.system('sudo ./pwnstar')
+      print(Fore.GREEN + '[+]Successfully ran PwnSTAR!' + Style.RESET_ALL)
+    except:
+      print(Fore.RED + '[*]Error running PwnSTAR' + Style.RESET_ALL)
+    os.chdir('..')
+    wait()
+  if in_put == '13':
     print(Fore.CYAN + '[*]Shutting down ' + interface + 'mon...' + Style.RESET_ALL)
     os.system('airmon-ng stop ' + interface)
     os.system('airmon-ng stop ' + interface + 'mon')

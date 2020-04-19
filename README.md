@@ -18,6 +18,7 @@ DISCLAIMER: This tool is for educational purposes only. I am not responsible for
 * [Fluxion](<https://github.com/FluxionNetwork/fluxion>) - Security Auditing and Social-Engineering Research Tool
 * [PentBox](<https://github.com/H4CK3RT3CH/pentbox-1.8>) - HoneyPot Setup Tool
 * [MouseJack](<https://github.com/BastilleResearch/mousejack>) - BT Keyboard and Mouse Hijacker
+* [PwnSTAR](<https://github.com/SilverFoxx/PwnSTAR>) - Fake AP Tool Framework
 
 ## Getting Started
 
