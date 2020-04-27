@@ -19,6 +19,7 @@ DISCLAIMER: This tool is for educational purposes only. I am not responsible for
 * [PentBox](<https://github.com/H4CK3RT3CH/pentbox-1.8>) - HoneyPot Setup Tool
 * [MouseJack](<https://github.com/BastilleResearch/mousejack>) - BT Keyboard and Mouse Hijacker
 * [PwnSTAR](<https://github.com/SilverFoxx/PwnSTAR>) - Fake AP Tool Framework
+* [HT-WPS](<https://github.com/SilentGhostX/HT-WPS-Breaker>) - WPS Pin Extractor   
 
 ## Getting Started
 

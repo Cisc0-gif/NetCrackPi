@@ -29,7 +29,8 @@ def main():
   print('*[10] WifiJammer (Use for RPi or w/ multiple adapters)   *')
   print('*[11] Pentbox1.8 (HoneyPot Setup)                        *')
   print('*[12] PwnSTAR (Fake AP Tool Framework)                   *')
-  print('*[13] Exit                                               *' + Style.RESET_ALL)
+  print('*[13] HT-WPS (WPS Pin Extraction Tool)                   *')
+  print('*[14] Exit                                               *' + Style.RESET_ALL)
   print('==========================================================')
   in_put = input(': ')
   if in_put == '1':
@@ -152,6 +153,15 @@ def main():
     os.chdir('..')
     wait()
   if in_put == '13':
+    print(Fore.CYAN + '[*]Starting HT-WPS...')
+    try:
+      os.chdir('HT-WPS-Breaker')
+      os.system("sudo ./HT-WB.sh")
+      print(Fore.GREEN + '[+]Successfully ran HT-WPS' + Style.RESET_ALL)
+    except:
+      print(Fore.RED + '[*]Error running HT-WPS' + Style.RESET_ALL)
+    os.chdir('..')
+  if in_put == '14':
     print(Fore.CYAN + '[*]Shutting down ' + interface + 'mon...' + Style.RESET_ALL)
     os.system('airmon-ng stop ' + interface)
     os.system('airmon-ng stop ' + interface + 'mon')
