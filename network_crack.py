@@ -30,7 +30,8 @@ def main():
   print('*[11] Pentbox1.8 (HoneyPot Setup)                        *')
   print('*[12] PwnSTAR (Fake AP Tool Framework)                   *')
   print('*[13] HT-WPS (WPS Pin Extraction Tool)                   *')
-  print('*[14] Exit                                               *' + Style.RESET_ALL)
+  print('*[14] Update Net_Crack                                   *')
+  print('*[15] Exit                                               *' + Style.RESET_ALL)
   print('==========================================================')
   in_put = input(': ')
   if in_put == '1':
@@ -162,6 +163,12 @@ def main():
       print(Fore.RED + '[*]Error running HT-WPS' + Style.RESET_ALL)
     os.chdir('..')
   if in_put == '14':
+    print(Fore.CYAN + '[*]Updating Packages & Net_Crack...' + Style.RESET_ALL)
+    os.system('sudo apt-get update && sudo apt-get upgrade')
+    os.system('sudo apt autoremove')
+    os.system('sudo git pull origin master')
+    print(Fore.GREEN + '[+]Update Complete!' + Style.RESET_ALL)
+  if in_put == '15':
     print(Fore.CYAN + '[*]Shutting down ' + interface + 'mon...' + Style.RESET_ALL)
     os.system('airmon-ng stop ' + interface)
     os.system('airmon-ng stop ' + interface + 'mon')
