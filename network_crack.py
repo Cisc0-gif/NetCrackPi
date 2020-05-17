@@ -25,7 +25,7 @@ def main():
   print('*[6] Ettercap (MiTM Attack)                              *')
   print('*[7] Fluxion (MiTM/Router Spoof Attack)                  *')
   print('*[8] Airgeddon (Attack Framework - Graphical)            *')
-  print('*[9] WiFi-Pumpkin (Rogue AP - Graphical)                 *')
+  print('*[9] WiFi-Pumpkin3 (Rogue AP - Graphical)                 *')
   print('*[10] WifiJammer (Use for RPi or w/ multiple adapters)   *')
   print('*[11] Pentbox1.8 (HoneyPot Setup)                        *')
   print('*[12] PwnSTAR (Fake AP Tool Framework)                   *')
@@ -111,7 +111,7 @@ def main():
   if in_put == '9':
     print(Fore.CYAN + '[*]Starting WiFi-Pumpkin...' + Style.RESET_ALL)
     try:
-      os.system('sudo wifi-pumpkin')
+      os.system('sudo wifipumpkin3')
       print(Fore.GREEN + '[+]Successfully ran WiFi-Pumpkin!' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running WiFi-Pumpkin' + Style.RESET_ALL)

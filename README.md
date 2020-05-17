@@ -13,7 +13,7 @@ DISCLAIMER: This tool is for educational purposes only. I am not responsible for
 * [Wifite2](<https://github.com/derv82/wifite2>) - Network Auditing Tool
 * Ettercap - MiTM Attack Suite
 * [Airgeddon](<https://github.com/v1s1t0r1sh3r3/airgeddon>) - Network Auditing Tool
-* [WiFi-Pumpkin](<https://github.com/P0cL4bs/WiFi-Pumpkin>) - GUI AP Spoofing Tool
+* [WiFiPumpkin3](<https://github.com/P0cL4bs/wifipumpkin3>) - GUI AP Spoofing Tool
 * [Wifijammer](<https://github.com/DanMcInerney/wifijammer>) - Stationary or Mobile WiFi Jammer
 * [Fluxion](<https://github.com/FluxionNetwork/fluxion>) - Security Auditing and Social-Engineering Research Tool
 * [PentBox](<https://github.com/H4CK3RT3CH/pentbox-1.8>) - HoneyPot Setup Tool
