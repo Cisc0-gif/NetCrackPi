@@ -33,8 +33,9 @@ def main():
   print('*[13] HT-WPS (WPS Pin Extraction Tool)                   *')
   print('*[14] Kismet GPS Wardriver                               *')
   print('*[15] Linset (WPA/WPA2 MiTM Attack Tool)                 *')
-  print('*[16] Update Net_Crack                                   *')
-  print('*[17] Exit                                               *' + Style.RESET_ALL)
+  print('*[16] Snort (Network Intrusion Detection System)         *')
+  print('*[17] Update Net_Crack                                   *')
+  print('*[18] Exit                                               *' + Style.RESET_ALL)
   print('==========================================================')
   in_put = input(': ')
   if in_put == '1':
@@ -196,12 +197,18 @@ def main():
       print(Fore.RED + '[*]Error running linset' + Style.RESET_ALL)
     os.chdir('..')
   if in_put == '16':
+    print(Fore.CYAN + '[*]Running Snort NIDS...')
+    ipnet = input('[*]Enter IPnet (ex. 192.168.1.0/24): ')
+    print('[*]Starting NIDS, Enter ^Z to exit...' + Style.RESET_ALL)
+    os.system('sudo snort -d -l snortlogs -h ' + ipnet + ' -A console -c /etc/snort/snort.conf')
+    print(Fore.GREEN + '[+]Finished Running Snort!' + Style.RESET_ALL)
+  if in_put == '17':
     print(Fore.CYAN + '[*]Updating Packages & Net_Crack...' + Style.RESET_ALL)
     os.system('sudo apt-get update && sudo apt-get upgrade')
     os.system('sudo apt autoremove')
     os.system('sudo git pull origin master')
     print(Fore.GREEN + '[+]Update Complete!' + Style.RESET_ALL)
-  if in_put == '17':
+  if in_put == '18':
     print(Fore.CYAN + '[*]Shutting down ' + interface + 'mon...' + Style.RESET_ALL)
     os.system('airmon-ng stop ' + interface)
     os.system('airmon-ng stop ' + interface + 'mon')
