@@ -21,7 +21,7 @@ printf "${GREEN}[+]Done! ${BLUE} \n[*]Configuring apt Installation Sources...${N
 sudo curl https://pastebin.com/raw/fNL6X8gt > /etc/apt/sources.list
 sudo apt-get update
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Installing Packages, Libraries, and Repos...${NC}\n"
-sudo apt-get install figlet netcat hashcat php tshark tcpdump telnet ftp git apache2 ssh arp-scan macchanger hddtemp lm-sensors ettercap-text-only build-essential ntfs-3g cifs.utils mount reaver aircrack-ng curl dhcpd isc-dhcp-server hostapd lighttpd unzip xterm pyrit openssl ufw bully pixiewps kismet -y
+sudo apt-get install figlet netcat hashcat php tshark tcpdump telnet ftp git apache2 ssh arp-scan macchanger hddtemp lm-sensors ettercap-text-only ettercap-graphical build-essential ntfs-3g cifs.utils mount reaver aircrack-ng curl dhcpd isc-dhcp-server hostapd lighttpd unzip xterm pyrit openssl ufw bully pixiewps kismet -y
 sudo ufw enable
 printf " ${BLUE}[*]Installing Python2 & Python3 Libraries...${NC}\n"
 sudo pip install -U -I pyusb

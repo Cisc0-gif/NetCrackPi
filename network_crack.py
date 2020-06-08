@@ -87,7 +87,7 @@ def main():
         print(Fore.GREEN + '[+]Successfully ended ettercap in graphical mode!' + Style.RESET_ALL)
       else:
         print(Fore.CYAN + '[*]Running ettercap in text mode...' + Style.RESET_ALL)
-        os.system('sudo ettercap -T')
+        os.system('sudo ettercap -C')
         print(Fore.GREEN + '[+]Successfully ended ettercap in text mode!' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running ettercap!' + Style.RESET_ALL)
