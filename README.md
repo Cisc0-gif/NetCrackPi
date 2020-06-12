@@ -32,7 +32,7 @@ To begin the framework, type ``` KITTlite ``` and execute in terminal.
 
 ## Legal Disclaimer
 
-Usage of KITT-Lite and/or the tools installed with KITT-Lite for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state, and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
+Usage of NetCrackPi and/or the tools installed with NetCrackPi for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state, and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
 ## Built With
 
