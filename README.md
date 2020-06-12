@@ -51,7 +51,6 @@ Usage of NetCrackPi and/or the tools installed with NetCrackPi for attacking tar
 
 This project is licensed under the GNU General Public License v3 - see the LICENSE file for details
 
-
 ## Acknowledgments
 
 All credits are given to the authors and contributors to tools used in this software
