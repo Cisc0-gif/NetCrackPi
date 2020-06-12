@@ -1,9 +1,7 @@
 # NetCrackPi
 
 The Network-Cracking-Pi is essentially a collective download candidate to turn your raspberry pi into a Network Cracker (for educational purposes of course).
-With NetCrackPi users don't have break the bank for a PenTesting laptop to change the OS on, instead for $35 the Raspberry Pi can act as their Network Cracking hidden weapon.
-
-DISCLAIMER: This tool is for educational purposes only. I am not responsible for the misuse by others of this tool in any way, shape or form.
+With NetCrackPi users don't have break the bank for a PenTesting laptop and instead use the  35$ Raspberry Pi as their Network Cracking hidden weapon.
 
 ## Features
 
@@ -32,6 +30,9 @@ Simply follow all instructions in the installer.
 
 To begin the framework, type ``` KITTlite ``` and execute in terminal. 
 
+## Legal Disclaimer
+
+Usage of KITT-Lite and/or the tools installed with KITT-Lite for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state, and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
 ## Built With
 
