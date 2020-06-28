@@ -79,7 +79,7 @@ cd ..
 printf " ${BLUE}[*]Installing Espionage...${NC}\n"
 sudo git clone https://github.com/josh0xA/Espionage
 cd Espionage
-sudo pip3 install -r requirements.txt
+sudo pip3 install -r requirments.txt
 cd ..
 sudo apt autoremove
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Moving NetCrackPi directory to /opt...${NC}\n"
