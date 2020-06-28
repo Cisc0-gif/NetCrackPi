@@ -1,7 +1,6 @@
 # NetCrackPi
 
-The Network-Cracking-Pi is essentially a collective download candidate to turn your raspberry pi into a Network Cracker (for educational purposes of course).
-With NetCrackPi users don't have break the bank for a PenTesting laptop and instead use the  35$ Raspberry Pi as their Network Cracking hidden weapon.
+This Repo is a collective download candidate to turn your raspberry pi into a Network Exploitation Utility (for educational purposes of course). Features of the NetCrackPi include wardriving, WEP, WPA, WPA2 cracking, packet sniffing, ARP spoofing, MiTM attacks, NIDS, WPS Pixie-Dust Attacks, AP Spoofing, and Networking Auditing. 
 
 ## Features
 
@@ -23,12 +22,12 @@ With NetCrackPi users don't have break the bank for a PenTesting laptop and inst
 
 ## Getting Started
 
-To begin, run ``` ./install.sh ``` to install all necessary libraries, packages, and tools.
+To begin installation, run ``` ./setup.sh ``` to install all necessary libraries, packages, and tools.
 Simply follow all instructions in the installer.
 
 ### Usage
 
-To begin the framework, type ``` KITTlite ``` and execute in terminal. 
+To begin the framework, type ``` netcrack ``` and execute in terminal. 
 
 ## Legal Disclaimer
 

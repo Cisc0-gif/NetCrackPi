@@ -34,8 +34,9 @@ def main():
   print('*[14] Kismet GPS Wardriver                               *')
   print('*[15] Linset (WPA/WPA2 MiTM Attack Tool)                 *')
   print('*[16] Snort (Network Intrusion Detection System)         *')
-  print('*[17] Update Net_Crack                                   *')
-  print('*[18] Exit                                               *' + Style.RESET_ALL)
+  print('*[17] Espionage (Packet Sniffer/ARP Spoofer)             *')
+  print('*[18] Update Net_Crack                                   *')
+  print('*[19] Exit                                               *' + Style.RESET_ALL)
   print('==========================================================')
   in_put = input(': ')
   if in_put == '1':
@@ -203,12 +204,32 @@ def main():
     os.system('sudo snort -d -l snortlogs -h ' + ipnet + ' -A console -c /etc/snort/snort.conf')
     print(Fore.GREEN + '[+]Finished Running Snort!' + Style.RESET_ALL)
   if in_put == '17':
+    print(Fore.CYAN + '[*]Running Espionage Packet sniffer...')
+    option = input(Fore.CYAN + "[*]Do you want to [p]acket sniff or ARP [s]poof? " + Style.RESET_ALL)
+    os.chdir("Espionage")
+    if option == 'p' or option == 'P':
+      try:
+        os.system('sudo python3 espionage.py --iface ' + interface + ' --normal -f espionage_output.pcap')
+        print(Fore.GREEN + '[+]Successfully ran espionage' + Style.RESET_ALL)
+      except:
+        print(Fore.RED + '[*]Error running espionage' + Style.RESET_ALL)
+    elif option == 's' or option == 'S':
+    vip = input(Fore.CYAN + '[*]Enter victim IP: ' + Style.RESET_ALL)
+      try:
+        os.system('sudo python3 espionage.py --target ' + vip + ' --iface ' + interface)
+        print(Fore.GREEN + '[+]Successfully ran espionage' + Style.RESET_ALL)
+      except:
+        print(Fore.RED + '[*]Error running espionage' + Style.RESET_ALL)
+    else:
+      print(Fored.RED + "[*]Please enter a valid option" + Style.RESET_ALL)
+    os.chdir('..')
+  if in_put == '18':
     print(Fore.CYAN + '[*]Updating Packages & Net_Crack...' + Style.RESET_ALL)
     os.system('sudo apt-get update && sudo apt-get upgrade')
     os.system('sudo apt autoremove')
     os.system('sudo git pull origin master')
     print(Fore.GREEN + '[+]Update Complete!' + Style.RESET_ALL)
-  if in_put == '18':
+  if in_put == '19':
     print(Fore.CYAN + '[*]Shutting down ' + interface + 'mon...' + Style.RESET_ALL)
     os.system('airmon-ng stop ' + interface)
     os.system('airmon-ng stop ' + interface + 'mon')

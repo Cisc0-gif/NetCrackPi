@@ -76,11 +76,16 @@ sudo git clone https://github.com/vk496/linset.git
 cd linset
 sudo chmod 777 linset
 cd ..
+printf " ${BLUE}[*]Installing Espionage...${NC}\n"
+sudo git clone https://github.com/josh0xA/Espionage
+cd Espionage
+sudo pip3 install -r requirements.txt
+cd ..
 sudo apt autoremove
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Moving NetCrackPi directory to /opt...${NC}\n"
 sudo mkdir /opt
 cd ..
 sudo mv NetCrackPi /opt
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Writing network_crack.py to alias...${NC}\n"
-sudo echo "alias NetCrack='sudo python3 /opt/NetCrackPi/network_crack.py'" >> /home/pi/.bashrc
+sudo echo "alias netcrack='sudo python3 /opt/NetCrackPi/network_crack.py'" >> /home/pi/.bashrc
 printf "${GREEN}[+]Done! \n[+]NetCrackPi Setup Complete!${NC}"
