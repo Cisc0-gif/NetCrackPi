@@ -35,8 +35,9 @@ def main():
   print('*[15] Linset (WPA/WPA2 MiTM Attack Tool)                 *')
   print('*[16] Snort (Network Intrusion Detection System)         *')
   print('*[17] Espionage (Packet Sniffer/ARP Spoofer)             *')
-  print('*[18] Update Net_Crack                                   *')
-  print('*[19] Exit                                               *' + Style.RESET_ALL)
+  print('*[18] EvilNet (VLAN Hopping, MAC Flooding, ARP Attacks)  *')
+  print('*[19] Update Net_Crack                                   *')
+  print('*[20] Exit                                               *' + Style.RESET_ALL)
   print('==========================================================')
   in_put = input(': ')
   if in_put == '1':
@@ -224,12 +225,19 @@ def main():
       print(Fored.RED + "[*]Please enter a valid option" + Style.RESET_ALL)
     os.chdir('..')
   if in_put == '18':
+    try:
+      os.chdir('EvilNet')
+      os.system('sudo python3 EvilNet.py')
+      print(Fore.GREEN + '[+]Successfully ran EvilNet' + Style.RESET_ALL)
+    except:
+      print(Fore.RED + '[*]Error running EvilNet' + Style.RESET_ALL)
+  if in_put == '19':
     print(Fore.CYAN + '[*]Updating Packages & Net_Crack...' + Style.RESET_ALL)
     os.system('sudo apt-get update && sudo apt-get upgrade')
     os.system('sudo apt autoremove')
     os.system('sudo git pull origin master')
     print(Fore.GREEN + '[+]Update Complete!' + Style.RESET_ALL)
-  if in_put == '19':
+  if in_put == '20':
     print(Fore.CYAN + '[*]Shutting down ' + interface + 'mon...' + Style.RESET_ALL)
     os.system('airmon-ng stop ' + interface)
     os.system('airmon-ng stop ' + interface + 'mon')

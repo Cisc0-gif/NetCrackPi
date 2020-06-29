@@ -91,6 +91,11 @@ sudo service privoxy restart
 sudo crontab -l | { cat; echo "@reboot sudo service privoxy start"; } | sudo crontab -
 printf " ${GREEN}[+]Privoxy running on port 8118!${NC}\n"
 wait_func
+printf " ${BLUE}[*]Installing EvilNet...${NC}\n"
+sudo git clone https://github.com/Matrix07ksa/EvilNet
+cd EvilNet
+sudo pip3 install -r requirements.txt
+cd ..
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Moving NetCrackPi directory to /opt...${NC}\n"
 sudo mkdir /opt
 cd ..
