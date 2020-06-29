@@ -20,6 +20,7 @@ This Repo is a collective download candidate to turn your raspberry pi into a Ne
 * [Linset](<https://github.com/vk496/linset>) - WPA/WPA2 MiTM Attack Tool
 * [Snort](<https://www.snort.org>) - Network Intrusion Detection System
 * [Espionage](<https://github.com/josh0xA/Espionage>) - Packet Sniffer/ARP Spoofer
+* [Privoxy](<https://www.privoxy.org/>) - Proxy Server for MiTM Attacks
 
 ## Getting Started
 

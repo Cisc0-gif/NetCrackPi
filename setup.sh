@@ -82,6 +82,15 @@ cd Espionage
 sudo pip3 install -r requirments.txt
 cd ..
 sudo apt autoremove
+printf " ${BLUE}[*]Installing privoxy...${NC}\n"
+sudo apt-get install privoxy
+cd /etc/privoxy/
+sudo rm config
+sudo -u root curl https://pastebin.com/raw/3gyRkyuX > config
+sudo service privoxy restart
+sudo crontab -l | { cat; echo "@reboot sudo service privoxy start"; } | sudo crontab -
+printf " ${GREEN}[+]Privoxy running on port 8118!${NC}\n"
+wait_func
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Moving NetCrackPi directory to /opt...${NC}\n"
 sudo mkdir /opt
 cd ..
