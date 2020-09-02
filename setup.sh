@@ -22,14 +22,14 @@ sudo apt-get install python-pip python3-pip
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Downloading Katoolin for APT Sources Configuration...${NC}\n"
 sudo git clone https://github.com/LionSec/katoolin.git
 cd katoolin
-printf "${BLUE}[*]Done! ${BLUE} [*]Select option 1 to configure APT sources and then use ^C to continue...${NC}\n"
+printf "${GREEN}[*]Done! ${BLUE} \n[*]Select option 1 to configure APT sources and then use ^C to continue...${NC}\n"
 wait_func
 sudo chmod 777 katoolin.py
 sudo python katoolin.py
 cd ..
 sudo apt update
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Installing Packages, Libraries, and Repos...${NC}\n"
-sudo apt-get install figlet netcat hashcat php tshark tcpdump telnet ftp git apache2 ssh arp-scan macchanger hddtemp lm-sensors xterm ettercap-text-only ettercap-graphical build-essential ntfs-3g cifs.utils mount reaver aircrack-ng curl dhcpd isc-dhcp-server hostapd lighttpd unzip xterm pyrit openssl ufw bully pixiewps kismet -y
+sudo apt-get install figlet netcat hashcat php tshark tcpdump telnet ftp git apache2 ssh arp-scan macchanger hddtemp lm-sensors xterm ettercap-text-only build-essential ntfs-3g cifs.utils mount reaver aircrack-ng curl dhcpd isc-dhcp-server hostapd lighttpd unzip xterm pyrit openssl ufw bully pixiewps kismet -y
 sudo ufw enable
 printf " ${BLUE}[*]Installing Python2 & Python3 Libraries...${NC}\n"
 sudo pip install -U -I pyusb
