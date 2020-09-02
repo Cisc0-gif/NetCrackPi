@@ -5,6 +5,8 @@ GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
+root=$(pwd)
+
 wait_func() {
   read -p "PRESS ENTER TO CONTINUE" wait
 }
@@ -17,9 +19,15 @@ printf "${GREEN}[+]Done! ${BLUE} \n[*]Updating and Upgrading Packages...${NC}\n"
 sudo apt-get update && sudo apt-get upgrade
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Making sure pip and pip3 are installed...${NC}\n"
 sudo apt-get install python-pip python3-pip
-printf "${GREEN}[+]Done! ${BLUE} \n[*]Configuring apt Installation Sources...${NC}\n"
-sudo curl https://pastebin.com/raw/fNL6X8gt > /etc/apt/sources.list
-sudo apt-get update
+printf "${GREEN}[+]Done! ${BLUE} \n[*]Downloading Katoolin for APT Sources Configuration...${NC}\n"
+sudo git clone https://github.com/LionSec/katoolin.git
+cd katoolin
+printf "${BLUE}[*]Done! ${BLUE} [*]Select option 1 to configure APT sources and then use ^C to continue...${NC}\n"
+wait_func
+sudo chmod 777 katoolin.py
+sudo python katoolin.py
+cd ..
+sudo apt update
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Installing Packages, Libraries, and Repos...${NC}\n"
 sudo apt-get install figlet netcat hashcat php tshark tcpdump telnet ftp git apache2 ssh arp-scan macchanger hddtemp lm-sensors xterm ettercap-text-only ettercap-graphical build-essential ntfs-3g cifs.utils mount reaver aircrack-ng curl dhcpd isc-dhcp-server hostapd lighttpd unzip xterm pyrit openssl ufw bully pixiewps kismet -y
 sudo ufw enable
@@ -77,9 +85,9 @@ cd linset
 sudo chmod 777 linset
 cd ..
 printf " ${BLUE}[*]Installing Espionage...${NC}\n"
-sudo git clone https://github.com/josh0xA/Espionage
+sudo git clone https://github.com/josh0xA/Espionage.git
 cd Espionage
-sudo pip3 install -r requirments.txt
+sudo pip3 install -r requirements.txt
 cd ..
 sudo apt autoremove
 printf " ${BLUE}[*]Installing privoxy...${NC}\n"
@@ -98,6 +106,7 @@ sudo pip3 install -r requirements.txt
 cd ..
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Moving NetCrackPi directory to /opt...${NC}\n"
 sudo mkdir /opt
+cd $root
 cd ..
 sudo mv NetCrackPi /opt
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Writing network_crack.py to alias...${NC}\n"
