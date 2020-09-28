@@ -104,6 +104,8 @@ sudo git clone https://github.com/Matrix07ksa/EvilNet
 cd EvilNet
 sudo pip3 install -r requirements.txt
 cd ..
+printf " ${BLUE}[*]Installing Wacker...${NC}\n"
+sudo git clone https://github.com/blunderbuss-wctf/wacker
 printf "${GREEN}[+]Done! ${BLUE} \n[*]Moving NetCrackPi directory to /opt...${NC}\n"
 sudo mkdir /opt
 cd $root

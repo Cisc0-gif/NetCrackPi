@@ -36,8 +36,9 @@ def main():
   print('*[16] Snort (Network Intrusion Detection System)         *')
   print('*[17] Espionage (Packet Sniffer/ARP Spoofer)             *')
   print('*[18] EvilNet (VLAN Hopping, MAC Flooding, ARP Attacks)  *')
-  print('*[19] Update Net_Crack                                   *')
-  print('*[20] Exit                                               *' + Style.RESET_ALL)
+  print('*[19] Wacker (WPA3 Dictionary Attack)                    *')
+  print('*[20] Update Net_Crack                                   *')
+  print('*[99] Exit                                               *' + Style.RESET_ALL)
   print('==========================================================')
   in_put = input(': ')
   if in_put == '1':
@@ -232,12 +233,24 @@ def main():
     except:
       print(Fore.RED + '[*]Error running EvilNet' + Style.RESET_ALL)
   if in_put == '19':
+    try:
+      os.chdir('wacker')
+      wordlist = input("Enter filepath to wordlist (Ex. /path/path/word.lst): ")
+      bssid = input("Enter BSSID of network: ")
+      ssid = input("Enter SSID of network: ")
+      chan = input("Enter channel of network: ")
+      os.system("sudo ./wacker.py --wordlist " + wordlist + " --ssid " + ssid + " --bssid " + bssid + " --interface " + interface + " --freq " + chan)
+      print(Fore.GREEN + "[+]Successfully ran wacker" + Style.RESET_ALL)
+    except:
+      print(Fore.RED + "[*]Error running wacker" + Style.RESET_ALL)
+    os.chdir('..')
+  if in_put == '20':
     print(Fore.CYAN + '[*]Updating Packages & Net_Crack...' + Style.RESET_ALL)
     os.system('sudo apt-get update && sudo apt-get upgrade')
     os.system('sudo apt autoremove')
     os.system('sudo git pull origin master')
     print(Fore.GREEN + '[+]Update Complete!' + Style.RESET_ALL)
-  if in_put == '20':
+  if in_put == '99':
     print(Fore.CYAN + '[*]Shutting down ' + interface + '...' + Style.RESET_ALL)
     os.system('airmon-ng stop ' + interface)
     os.system('airmon-ng stop ' + interface)

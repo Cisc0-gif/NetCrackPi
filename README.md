@@ -22,6 +22,7 @@ This Repo is a collective download candidate to turn your raspberry pi into a Ne
 * [Espionage](<https://github.com/josh0xA/Espionage>) - Packet Sniffer/ARP Spoofer
 * [Privoxy](<https://www.privoxy.org/>) - Proxy Server for MiTM Attacks
 * [EvilNet](<https://github.com/Matrix07ksa/EvilNet>) - ARP Attacks, VLAN Attacks, MAC Flooding, etc.
+* [Wacker](<https://github.com/blunderbuss-wctf/wacker>) - WPA3 Dictionary Attack
 
 ## Getting Started
 
