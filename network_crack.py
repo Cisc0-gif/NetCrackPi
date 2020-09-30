@@ -8,9 +8,8 @@ ops = list(range(1,18))
 def wait():
   wait = input('PRESS ENTER TO CONTINUE')
 
-os.chdir('/opt/NetCrackPi')
-
 def main():
+  os.chdir('/opt/NetCrackPi')
   print(Fore.GREEN + Style.BRIGHT + '       _   __     __      ______     ______       __')
   print('      / | / /__  / /_    / ____/____/ ____ \_____/ /__')
   print('     /  |/ / _ \/ __/   / /   / ___/ / __ `/ ___/ //_/')
@@ -80,7 +79,6 @@ def main():
       print(Fore.GREEN + '[+]Successfully ran wifite.py!' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running wifite.py' + Style.RESET_ALL)
-    os.chdir('..')
   if in_put == '6':
     got = input(Fore.CYAN + '[*]Do you want to run ettercap in Graphical or Text mode?[G/T]: ' + Style.RESET_ALL)
     try:
@@ -103,7 +101,6 @@ def main():
       print(Fore.GREEN + '[+]Successfully ran fluxion.sh!' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running fluxion.sh' + Style.RESET_ALL)
-    os.chdir('..')
   if in_put == '8':
     print(Fore.CYAN + '[*]Starting Airgeddon...' + Style.RESET_ALL)
     try:
@@ -112,8 +109,6 @@ def main():
       print(Fore.GREEN + '[+]Successfully ran airgeddon.sh!' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running airgeddon.sh' + Style.RESET_ALL)
-    os.chdir('..')
-    wait()
   if in_put == '9':
     print(Fore.CYAN + '[*]Starting WiFi-Pumpkin...' + Style.RESET_ALL)
     try:
@@ -148,7 +143,6 @@ def main():
       print(Fore.GREEN + '[+]Successfully ran pentbox1.8!' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running pentbox1.8' + Style.RESET_ALL)
-    os.chdir('..')
     wait()
   if in_put == '12':
     print(Fore.CYAN + '[*]Starting PwnSTAR...' + Style.RESET_ALL)
@@ -158,7 +152,6 @@ def main():
       print(Fore.GREEN + '[+]Successfully ran PwnSTAR!' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running PwnSTAR' + Style.RESET_ALL)
-    os.chdir('..')
     wait()
   if in_put == '13':
     print(Fore.CYAN + '[*]Starting HT-WPS...')
@@ -168,7 +161,6 @@ def main():
       print(Fore.GREEN + '[+]Successfully ran HT-WPS' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running HT-WPS' + Style.RESET_ALL)
-    os.chdir('..')
   if in_put == '14':
     print(Fore.GREEN + "   _       __              ____       _")
     print("  | |     / /___ ______   / __ \_____(_)   _____ ")
@@ -198,7 +190,6 @@ def main():
       print(Fore.GREEN + '[*]Successfully ran linset' + Style.RESET_ALL)
     except:
       print(Fore.RED + '[*]Error running linset' + Style.RESET_ALL)
-    os.chdir('..')
   if in_put == '16':
     print(Fore.CYAN + '[*]Running Snort NIDS...')
     ipnet = input('[*]Enter IPnet (ex. 192.168.1.0/24): ')
@@ -224,7 +215,6 @@ def main():
         print(Fore.RED + '[*]Error running espionage' + Style.RESET_ALL)
     else:
       print(Fored.RED + "[*]Please enter a valid option" + Style.RESET_ALL)
-    os.chdir('..')
   if in_put == '18':
     try:
       os.chdir('EvilNet')
@@ -243,7 +233,6 @@ def main():
       print(Fore.GREEN + "[+]Successfully ran wacker" + Style.RESET_ALL)
     except:
       print(Fore.RED + "[*]Error running wacker" + Style.RESET_ALL)
-    os.chdir('..')
   if in_put == '20':
     print(Fore.CYAN + '[*]Updating Packages & Net_Crack...' + Style.RESET_ALL)
     os.system('sudo apt-get update && sudo apt-get upgrade')
